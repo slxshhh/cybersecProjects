@@ -1,3 +1,6 @@
+<img width="2048" height="768" alt="image" src="https://github.com/user-attachments/assets/9c095dfe-91bb-4d13-a556-b2190f07ef93" />
+
+
 # 🛡️ Cybersecurity Projects
 
 ![Cybersecurity](https://img.shields.io/badge/Cybersecurity-000000?style=for-the-badge\&logo=kalilinux\&logoColor=white)
