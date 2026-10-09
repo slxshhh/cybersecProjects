@@ -89,6 +89,26 @@ Ferramenta desenvolvida para realizar **coleta automatizada de informações dis
 
 ---
 
+### 🔑 Pass Manager
+
+**Linguagem:** C
+
+Gerenciador de senhas desenvolvido em C para armazenar e organizar credenciais associadas a diferentes serviços. A ferramenta registra o nome do serviço, o usuário e a senha em um arquivo `.txt`, aplicando uma operação de **XOR para ofuscar as senhas armazenadas**.
+
+O projeto explora conceitos fundamentais de manipulação de arquivos, operações bit a bit e gerenciamento de dados sensíveis, permitindo compreender na prática como funciona a ofuscação de informações.
+
+**Conceitos praticados:**
+
+* Operações bit a bit (Bitwise XOR)
+* Ofuscação de senhas
+* Manipulação de arquivos em C
+* Leitura e escrita de dados
+* Gerenciamento de credenciais
+* Manipulação de strings
+* Segurança de informações sensíveis
+
+---
+
 ## 🛡️ Áreas de Estudo
 
 Os projetos deste repositório exploram diferentes áreas relacionadas à cibersegurança:
