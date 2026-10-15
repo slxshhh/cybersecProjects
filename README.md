@@ -125,6 +125,24 @@ Sistema de autenticação desenvolvido em Python para simular o funcionamento de
 - Fundamentos de segurança da informação
 
 ---
+### 🔏 Message Encryption & Decryption
+
+**Linguagem:** C
+
+Script desenvolvido em C para demonstrar o processo de criptografia e descriptografia de mensagens utilizando a operação **XOR (Exclusive OR)**. O programa recebe uma mensagem, aplica a operação XOR com uma chave definida, exibe o conteúdo criptografado e, em seguida, utiliza a mesma chave para recuperar e exibir a mensagem original.
+
+O projeto explora conceitos fundamentais de criptografia simétrica, operações bit a bit e reversibilidade de dados, proporcionando uma implementação prática para compreender como uma mesma chave pode ser utilizada nos processos de transformação e recuperação de informações.
+
+**Conceitos praticados:**
+- Criptografia simétrica
+- Operações bit a bit (Bitwise XOR)
+- Criptografia e descriptografia de mensagens
+- Uso e reutilização de chaves
+- Manipulação de strings em C
+- Reversibilidade de operações
+- Fundamentos de criptografia
+
+---
 
 ## 🛡️ Áreas de Estudo
 
