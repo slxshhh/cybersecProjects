@@ -109,6 +109,23 @@ O projeto explora conceitos fundamentais de manipulação de arquivos, operaçõ
 
 ---
 
+### 🔐 Authentication System
+
+**Linguagem:** Python
+
+Sistema de autenticação desenvolvido em Python para simular o funcionamento de um mecanismo de cadastro e login de usuários. O módulo `auth_system` permite cadastrar usuários e armazenar suas senhas em formato hash utilizando **SHA-256**, salvando os registros em um arquivo `.json`. O módulo `login` verifica a existência do usuário cadastrado e valida as credenciais informadas para simular o processo de autenticação.
+
+**Conceitos praticados:**
+- Autenticação de usuários
+- Hashing de senhas com SHA-256
+- Manipulação de arquivos JSON
+- Cadastro e validação de credenciais
+- Comparação de hashes
+- Estruturação de módulos em Python
+- Fundamentos de segurança da informação
+
+---
+
 ## 🛡️ Áreas de Estudo
 
 Os projetos deste repositório exploram diferentes áreas relacionadas à cibersegurança:
