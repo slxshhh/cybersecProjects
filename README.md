@@ -144,6 +144,25 @@ O projeto explora conceitos fundamentais de criptografia simétrica, operações
 
 ---
 
+### 🔒 Fernet Encryption & Decryption
+
+**Linguagem:** Python
+
+Script desenvolvido em Python utilizando a biblioteca `cryptography` e o módulo `Fernet` para demonstrar o processo de criptografia e descriptografia de mensagens. O programa recebe uma mensagem, realiza sua criptografia com uma chave gerada, exibe o conteúdo criptografado e a chave utilizada e, em seguida, descriptografa os dados para recuperar a mensagem original.
+
+O projeto explora conceitos de criptografia simétrica moderna, gerenciamento de chaves e proteção da integridade dos dados, permitindo comparar uma implementação baseada em XOR, desenvolvida anteriormente em C, com uma solução criptográfica de nível mais elevado.
+
+**Conceitos praticados:**
+- Criptografia simétrica com Fernet
+- Biblioteca `cryptography` do Python
+- Geração e gerenciamento de chaves
+- Criptografia e descriptografia de mensagens
+- Integridade e autenticidade dos dados
+- Codificação de dados criptografados
+- Fundamentos de segurança da informação
+
+---
+
 ## 🛡️ Áreas de Estudo
 
 Os projetos deste repositório exploram diferentes áreas relacionadas à cibersegurança:
