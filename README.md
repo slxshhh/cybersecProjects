@@ -162,6 +162,28 @@ O projeto explora conceitos de criptografia simétrica moderna, gerenciamento de
 - Fundamentos de segurança da informação
 
 ---
+## 🌐 Web Vulnerability Scanner
+
+![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![libcurl](https://img.shields.io/badge/libcurl-073551?style=for-the-badge&logo=curl&logoColor=white)
+![Regex](https://img.shields.io/badge/Regex-4B0082?style=for-the-badge&logo=regex&logoColor=white)
+
+Ferramenta experimental desenvolvida em C para explorar os fundamentos de **testes automatizados de segurança em aplicações web**. O scanner carrega regras de um arquivo CSV, executa requisições HTTP utilizando a biblioteca `libcurl` e analisa as respostas recebidas por meio de expressões regulares para identificar correspondências com assinaturas predefinidas.
+
+A ferramenta também gera um relatório em `report.txt`, registrando as detecções e informações relacionadas às regras executadas. A versão atual utiliza endpoints de demonstração do HTTPBin para testar o fluxo de requisições, análise de respostas e geração de relatórios.
+
+**Conceitos praticados:**
+- Fundamentos de Web Security
+- Requisições HTTP com `libcurl`
+- Métodos GET e POST
+- Parsing de regras em arquivos CSV
+- Expressões regulares (Regex)
+- Identificação baseada em assinaturas
+- Automação de testes de segurança
+- Geração de relatórios de análise
+- Gerenciamento de memória em C
+
+---
 
 ## 🛡️ Áreas de Estudo
 
