@@ -162,7 +162,7 @@ O projeto explora conceitos de criptografia simétrica moderna, gerenciamento de
 - Fundamentos de segurança da informação
 
 ---
-## 🌐 Web Vulnerability Scanner
+## 🌐 Web Vulnerability Scanner (C version)
 
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
 ![libcurl](https://img.shields.io/badge/libcurl-073551?style=for-the-badge&logo=curl&logoColor=white)
@@ -182,6 +182,35 @@ A ferramenta também gera um relatório em `report.txt`, registrando as detecç�
 - Automação de testes de segurança
 - Geração de relatórios de análise
 - Gerenciamento de memória em C
+
+---
+
+### 🌐 Web Vulnerability Scanner (Python version)
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Requests](https://img.shields.io/badge/Requests-2CA5E0?style=for-the-badge&logo=python&logoColor=white)
+![Regex](https://img.shields.io/badge/Regex-4B0082?style=for-the-badge&logo=regex&logoColor=white)
+![CSV](https://img.shields.io/badge/CSV-217346?style=for-the-badge&logo=files&logoColor=white)
+
+Ferramenta desenvolvida em Python para automatizar testes básicos de segurança em aplicações web por meio de regras predefinidas. O scanner carrega as regras de um arquivo `rules.csv`, executa requisições HTTP utilizando a biblioteca `requests` e analisa as respostas com expressões regulares por meio do módulo `re`, buscando correspondências com padrões associados a possíveis vulnerabilidades.
+
+Quando uma regra identifica uma correspondência, o programa registra as informações relevantes em um arquivo `report.txt`, facilitando a consulta e a análise dos resultados obtidos durante a execução.
+
+**Conceitos praticados:**
+- Web Security e testes automatizados
+- Requisições HTTP com `requests`
+- Parsing e leitura de arquivos CSV
+- Expressões regulares com `re`
+- Detecção baseada em regras e assinaturas
+- Automação de verificações de segurança
+- Manipulação de arquivos e geração de relatórios
+- Tratamento de respostas HTTP
+
+**Evolução do projeto:**
+- **Versão em C:** implementação inicial utilizando `libcurl`, Regex e regras em CSV.
+- **Versão em Python:** reimplementação com `requests`, `re` e `csv`, mantendo a lógica de análise baseada em regras e a geração de relatórios.
+
+**Nota:** a identificação de uma assinatura em uma resposta HTTP indica uma possível ocorrência, não necessariamente a confirmação de uma vulnerabilidade. Os resultados devem ser validados por testes adicionais em ambientes autorizados.
 
 ---
 
