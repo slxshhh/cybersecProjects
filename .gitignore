@@ -1,0 +1,28 @@
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Arquivos locais e configurações
+.env
+.env.*
+
+# Regras locais do Web Vulnerability Scanner
+rules.csv
+
+# Relatórios gerados
+report.txt
+
+# Arquivos temporários
+*.log
+*.tmp
+
+# IDEs
+.vscode/
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
