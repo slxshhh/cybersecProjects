@@ -54,6 +54,65 @@ Ferramenta desenvolvida para explorar o conceito de **quebra de hashes**, permit
 - Manipulação de arquivos
 - Performance em C
 
+## Como executar
+
+### Pré-requisitos
+
+- GCC
+- OpenSSL
+- Arquivo `wordlist.txt` na pasta do projeto.
+
+### Linux (Kali/Debian/Ubuntu)
+
+**1. Instale as dependências:**
+
+```bash
+sudo apt update
+sudo apt install build-essential libssl-dev
+```
+
+**2. Compile o programa:**
+
+```bash
+gcc hash_cracker.c -o hash_cracker -lcrypto
+```
+
+**3. Execute:**
+
+```bash
+./hash_cracker
+```
+
+### Windows (MSYS2 UCRT64)
+
+**1. Instale o GCC e o OpenSSL:**
+
+```bash
+pacman -S mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-openssl
+```
+
+**2. Compile o programa:**
+
+```bash
+gcc hash_cracker.c -o hash_cracker.exe -lcrypto
+```
+
+**3. Execute:**
+
+```bash
+./hash_cracker.exe
+```
+
+### Arquivos necessários
+
+O arquivo `wordlist.txt` deve estar no diretório de execução do programa.
+
+### Observações
+
+- O projeto utiliza MD5 para calcular o hash das palavras presentes na wordlist.
+- O hash-alvo está definido diretamente no código-fonte.
+- O MD5 é utilizado exclusivamente para fins educacionais e demonstração de conceitos de identificação e comparação de hashes. Não é recomendado para aplicações criptográficas modernas.
+
 📂 [Acessar projeto](./password-security/hash-cracker/)
 
 ---
@@ -74,6 +133,64 @@ O projeto explora conceitos fundamentais de manipulação de arquivos, operaçõ
 - Gerenciamento de credenciais
 - Manipulação de strings
 - Segurança de informações sensíveis
+
+## Como executar
+
+### Pré-requisitos
+
+- GCC (GNU Compiler Collection).
+
+### Linux (Kali/Debian/Ubuntu)
+
+**1. Instale o GCC, caso ainda não esteja instalado:**
+
+```bash
+sudo apt update
+sudo apt install build-essential
+```
+
+**2. Compile o programa:**
+
+```bash
+gcc pass_manager.c -o pass_manager
+```
+
+**3. Execute:**
+
+```bash
+./pass_manager
+```
+
+### Windows (MSYS2 UCRT64)
+
+**1. Instale o GCC, caso ainda não esteja instalado:**
+
+```bash
+pacman -S mingw-w64-ucrt-x86_64-gcc
+```
+
+**2. Compile o programa:**
+
+```bash
+gcc pass_manager.c -o pass_manager.exe
+```
+
+**3. Execute:**
+
+```bash
+./pass_manager.exe
+```
+
+### Arquivos gerados
+
+- `password_db.txt`: arquivo criado automaticamente para armazenar os serviços, usuários e senhas cadastrados.
+
+### Observações
+
+- O programa solicita o serviço, o nome de usuário e a senha.
+- As credenciais são armazenadas em `password_db.txt`.
+- As senhas passam por uma operação XOR utilizando uma chave fixa (`K`) antes de serem gravadas.
+- **Atenção:** XOR com chave fixa é apenas uma forma de ofuscação, não uma criptografia segura. O projeto tem finalidade educacional e não deve ser utilizado para armazenar senhas reais.
 
 📂 [Acessar projeto](./password-security/pass-manager/)
 
@@ -96,6 +213,68 @@ O projeto explora conceitos fundamentais de criptografia simétrica, operações
 - Reversibilidade de operações
 - Fundamentos de criptografia
 
+## Como executar
+
+### Pré-requisitos
+
+- GCC (GNU Compiler Collection).
+- Não são necessárias bibliotecas externas.
+
+### Linux (Kali/Debian/Ubuntu)
+
+**1. Instale o GCC, caso ainda não esteja instalado:**
+
+```bash
+sudo apt update
+sudo apt install build-essential
+```
+
+**2. Compile o programa:**
+
+```bash
+gcc crypto.c -o crypto
+```
+
+**3. Execute:**
+
+```bash
+./crypto
+```
+
+### Windows (MSYS2 UCRT64)
+
+**1. Instale o GCC, caso ainda não esteja instalado:**
+
+```bash
+pacman -S mingw-w64-ucrt-x86_64-gcc
+```
+
+**2. Compile o programa:**
+
+```bash
+gcc crypto.c -o crypto.exe
+```
+
+**3. Execute:**
+
+```bash
+./crypto.exe
+```
+
+### Funcionalidades
+
+- Recebimento de uma mensagem pelo terminal.
+- Definição de uma chave de um caractere.
+- Aplicação da operação XOR para transformar a mensagem.
+- Recuperação da mensagem original utilizando a mesma chave.
+
+### Observações
+
+- O projeto utiliza exclusivamente bibliotecas padrão do C.
+- A operação XOR é reversível quando aplicada novamente com a mesma chave.
+- A implementação utiliza um único caractere como chave.
+- **Atenção:** essa implementação é didática e não oferece segurança criptográfica real. XOR com chave fixa ou curta não deve ser utilizado para proteger informações sensíveis.
+
 📂 [Acessar projeto](./cryptography/message-encryption-c/)
 
 ---
@@ -116,6 +295,78 @@ O projeto explora conceitos de criptografia simétrica moderna, gerenciamento de
 - Integridade e autenticidade dos dados
 - Codificação de dados criptografados
 - Fundamentos de segurança da informação
+
+## Como executar
+
+### Pré-requisitos
+
+- Python 3 instalado.
+- Biblioteca `cryptography`.
+
+### Linux (Kali/Debian/Ubuntu)
+
+**1. Crie um ambiente virtual (opcional, mas recomendado):**
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+**2. Instale a dependência:**
+
+```bash
+pip install -r requirements.txt
+```
+
+**3. Execute o script:**
+
+```bash
+python3 crypto.py
+```
+
+### Windows
+
+**1. Crie e ative um ambiente virtual (opcional, mas recomendado):**
+
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+
+**2. Instale a dependência:**
+
+```powershell
+pip install -r requirements.txt
+```
+
+**3. Execute o script:**
+
+```powershell
+python crypto.py
+```
+
+### Dependências
+
+O arquivo `requirements.txt` deve conter:
+
+```text
+cryptography
+```
+
+### Funcionalidades
+
+- Geração automática de chave simétrica utilizando Fernet.
+- Criptografia de mensagens.
+- Descriptografia da mensagem utilizando a mesma chave.
+- Exibição da chave gerada, do conteúdo criptografado e da mensagem original.
+
+### Observações
+
+- O projeto utiliza a biblioteca Cryptography e o algoritmo Fernet.
+- Uma nova chave é gerada a cada execução.
+- A chave permanece em memória durante a execução do programa.
+- A demonstração trabalha com mensagens digitadas pelo usuário, não realiza criptografia de arquivos.
+- A chave gerada é necessária para descriptografar os dados posteriormente. Se ela for perdida, não será possível recuperar a mensagem criptografada.
 
 📂 [Acessar projeto](./cryptography/fernet-encryption-python/)
 
@@ -140,6 +391,72 @@ Sistema de autenticação desenvolvido em Python para simular o funcionamento de
 - Estruturação de módulos em Python
 - Fundamentos de segurança da informação
 
+## Como executar
+
+### Pré-requisitos
+
+- Python 3 instalado.
+
+### Linux (Kali/Debian/Ubuntu)
+
+**1. Verifique a instalação do Python:**
+
+```bash
+python3 --version
+```
+
+**2. Execute o sistema de cadastro:**
+
+```bash
+python3 auth_system.py
+```
+
+**3. Execute o sistema de autenticação:**
+
+```bash
+python3 login.py
+```
+
+### Windows
+
+**1. Verifique a instalação do Python:**
+
+```powershell
+python --version
+```
+
+**2. Execute o sistema de cadastro:**
+
+```powershell
+python auth_system.py
+```
+
+**3. Execute o sistema de autenticação:**
+
+```powershell
+python login.py
+```
+
+### Arquivos gerados
+
+- `users.json`: arquivo criado pelo `auth_system.py`, contendo os nomes de usuários e seus respectivos hashes SHA-256.
+
+### Fluxo de funcionamento
+
+1. Execute `auth_system.py` para cadastrar um usuário.
+2. Informe o nome de usuário e a senha desejada.
+3. O sistema gera o hash SHA-256 da senha e salva as informações em `users.json`.
+4. Execute `login.py` para realizar a autenticação.
+5. Informe as credenciais cadastradas.
+6. O sistema compara o hash da senha informada com o valor armazenado e retorna o resultado da autenticação.
+
+### Observações
+
+- Os dois scripts devem permanecer no mesmo diretório de `users.json`.
+- O arquivo `users.json` é criado automaticamente durante o cadastro.
+- O projeto utiliza SHA-256 para demonstrar o armazenamento e a comparação de hashes de senhas.
+- **Atenção:** SHA-256 puro não é recomendado para armazenamento de senhas em aplicações reais. Sistemas de produção devem utilizar algoritmos específicos para senhas, como Argon2id, bcrypt ou scrypt.
+
 📂 [Acessar projeto](./authentication/authentication-system/)
 
 ---
@@ -162,6 +479,69 @@ Scanner de portas desenvolvido para identificar **portas TCP abertas** em um det
 - Tratamento de conexões
 - Automação com Python
 
+## Como executar
+
+### Pré-requisitos
+
+- Python 3 instalado.
+- Não são necessárias bibliotecas externas.
+
+### Linux (Kali/Debian/Ubuntu)
+
+**1. Verifique a instalação do Python:**
+
+```bash
+python3 --version
+```
+
+**2. Execute o scanner:**
+
+```bash
+python3 port_scanner.py
+```
+
+### Windows
+
+**1. Verifique a instalação do Python:**
+
+```powershell
+python --version
+```
+
+**2. Execute o scanner:**
+
+```powershell
+python port_scanner.py
+```
+
+### Configuração
+
+O alvo e o intervalo de portas são definidos diretamente no código-fonte:
+
+```python
+scanner = PortScanner('127.0.0.1', 20, 100)
+```
+
+- `127.0.0.1`: endereço IP do alvo.
+- `20`: porta inicial.
+- `100`: porta final.
+
+Para modificar a varredura, altere os valores passados ao construtor da classe `PortScanner`.
+
+### Funcionalidades
+
+- Varredura de portas TCP.
+- Identificação de portas abertas por meio de conexões socket.
+- Definição de timeout de conexão.
+- Exibição do alvo, intervalo analisado e resultados da varredura.
+
+### Observações
+
+- O projeto utiliza exclusivamente bibliotecas nativas do Python.
+- A varredura utiliza conexões TCP e timeout de 0,5 segundo.
+- O alvo padrão é `127.0.0.1`, limitado às portas de 20 a 100.
+- Utilize a ferramenta somente em sistemas e redes próprios ou para os quais você tenha autorização explícita.
+
 📂 [Acessar projeto](./network/port-scanner/)
 
 ---
@@ -180,6 +560,67 @@ O projeto tem como objetivo facilitar a análise de resultados provenientes de f
 - Manipulação de arquivos
 - Expressões regulares
 - Tratamento e organização de resultados
+
+## Como executar
+
+### Pré-requisitos
+
+- Python 3 instalado.
+- Não são necessárias bibliotecas externas.
+
+### Linux (Kali/Debian/Ubuntu)
+
+**1. Verifique a instalação do Python:**
+
+```bash
+python3 --version
+```
+
+**2. Execute o script:**
+
+```bash
+python3 scan_parser.py
+```
+
+### Windows
+
+**1. Verifique a instalação do Python:**
+
+```powershell
+python --version
+```
+
+**2. Execute o script:**
+
+```powershell
+python scan_parser.py
+```
+
+### Configuração
+
+Os endereços IP e suas respectivas portas estão definidos diretamente no dicionário `dic`, no código-fonte:
+
+```python
+dic = {
+    "192.168.1.1": [22, 21, 443],
+    "10.0.0.5": [443, 22],
+    "172.16.0.100": [8080, 80, 443, 22, 21]
+}
+```
+
+Para adicionar ou modificar os dados, altere os endereços IP e as listas de portas.
+
+### Funcionalidades
+
+- Armazenamento de endereços IP e portas em um dicionário.
+- Percorrimento dos registros utilizando estruturas de repetição.
+- Exibição dos endereços IP e suas respectivas portas no terminal.
+
+### Observações
+
+- O projeto utiliza exclusivamente recursos nativos do Python.
+- Os dados são estáticos e definidos diretamente no código.
+- O script não realiza varreduras de rede nem verifica vulnerabilidades. Ele apenas apresenta os dados fornecidos.
 
 📂 [Acessar projeto](./network/scan-parser/)
 
@@ -202,6 +643,77 @@ Ferramenta desenvolvida para realizar **coleta automatizada de informações dis
 - Parsing de HTML
 - Automação
 - Manipulação de dados
+
+## Como executar
+
+### Pré-requisitos
+
+- Python 3 instalado.
+- Bibliotecas `requests` e `beautifulsoup4`.
+
+### Linux (Kali/Debian/Ubuntu)
+
+**1. Crie e ative um ambiente virtual (opcional, mas recomendado):**
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+**2. Instale as dependências:**
+
+```bash
+pip install -r requirements.txt
+```
+
+**3. Execute o script:**
+
+```bash
+python3 web_scraper.py
+```
+
+### Windows
+
+**1. Crie e ative um ambiente virtual (opcional, mas recomendado):**
+
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+
+**2. Instale as dependências:**
+
+```powershell
+pip install -r requirements.txt
+```
+
+**3. Execute o script:**
+
+```powershell
+python web_scraper.py
+```
+
+### Dependências
+
+O arquivo `requirements.txt` deve conter:
+
+```text
+requests
+beautifulsoup4
+```
+
+### Funcionalidades
+
+- Realização de requisições HTTP utilizando Requests.
+- Análise do conteúdo HTML com BeautifulSoup.
+- Extração do título da página.
+- Identificação e exibição dos links encontrados no HTML.
+
+### Observações
+
+- O endereço utilizado atualmente é `https://quotes.toscrape.com/`.
+- O script verifica se a requisição retornou o status HTTP 200 antes de processar o conteúdo.
+- O projeto possui finalidade educacional, demonstrando conceitos básicos de Web Scraping.
 
 📂 [Acessar projeto](./web-security/web-scraper/)
 
