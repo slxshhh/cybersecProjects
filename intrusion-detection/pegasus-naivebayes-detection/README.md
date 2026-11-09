@@ -24,14 +24,8 @@ Embora spywares sofisticados operem via vulnerabilidades *zero-click* e sejam pr
 
 ### Matriz de Confusão ($N = 300$ amostras de teste)
 
-```text
-                       +-------------------------------+-------------------------------+
-                       |      Previsto: LEGÍTIMO       |      Previsto: MALICIOSO      |
-+----------------------+-------------------------------+-------------------------------+
-| Realidade: LEGÍTIMO  | Verdadeiros Negativos (TN): 4 | Falsos Positivos (FP): 87     |
-| Realidade: MALICIOSO | Falsos Negativos (FN): 13     | Verdadeiros Positivos (TP): 196|
-+----------------------+-------------------------------+-------------------------------+
-```
+<img width="652" height="489" alt="image" src="https://github.com/user-attachments/assets/77dc1ffa-2f5f-4e26-9a99-63a199ce9de2" />
+
 
 * **Priorização do Recall:** Em monitoramento defensivo, um **Falso Negativo ($FN = 13$)** representa uma invasão não detectada, enquanto um **Falso Positivo ($FP = 87$)** gera apenas a checagem por um analista. O modelo prioriza a minimização de $FN$.
 
