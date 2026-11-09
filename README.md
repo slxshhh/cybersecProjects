@@ -19,13 +19,12 @@ Os projetos são desenvolvidos principalmente em **C e Python**, utilizando dife
 
 ## 📑 Índice
 
-- [🚀 Projetos](#-projetos)
-  - [📊 Análise](#-machine-learning-e-detecção-de-ameaças)   
+- [🚀 Projetos](#-projetos) 
   - [🔐 Criptografia e Segurança de Senhas](#-criptografia-e-segurança-de-senhas)
   - [🔑 Autenticação](#-autenticação)
   - [🌐 Redes e Reconhecimento](#-redes-e-reconhecimento)
   - [🕸️ Segurança Web](#️-segurança-web)
-  - [🛡️ Detecção de Intrusão](#️-detecção-de-intrusão)
+  - [🛡️ Detecção de Intrusão e Ameaças](#️-detecção-de-intrusão-e-ameaças)
 - [🧰 Tecnologias](#-tecnologias)
 - [📊 Áreas de Estudo](#-áreas-de-estudo)
 - [🔧 Como executar](#-como-executar)
@@ -767,9 +766,25 @@ O projeto possui duas implementações:
 
 ---
 
-### 🤖 Machine Learning e Detecção de Ameaças
+### 🛡️ Detecção de Intrusão e Ameaças
 
-Projetos que exploram o uso de aprendizado de máquina e análise de dados aplicados à identificação de padrões suspeitos e ameaças cibernéticas.
+#### 🚧 Intrusion Detection System (IDS)
+
+**Status:** Planejado
+
+Sistema de Detecção de Intrusão (IDS) que será desenvolvido para estudar o monitoramento de atividades, identificação de padrões suspeitos e geração de alertas de segurança.
+
+**Conceitos planejados:**
+- Monitoramento de rede
+- Análise de tráfego e eventos
+- Detecção de atividades suspeitas
+- Logs e geração de alertas
+- Network Security
+- Blue Team
+
+📂 [Acessar diretório do projeto](./intrusion-detection/)
+
+---
 
 #### 🕵️ Pegasus Telemetry Detection — Categorical Naive Bayes
 
@@ -800,26 +815,6 @@ A solução foi desenvolvida com foco em uma possível aplicação como filtro d
 **Documentação e execução:** consulte o README individual do projeto.
 
 📂 [Documentação completa](intrusion-detection/pegasus-naivebayes-detection)
-
----
-
-### 🛡️ Detecção de Intrusão
-
-#### 🚧 Intrusion Detection System (IDS)
-
-**Status:** Planejado
-
-Sistema de Detecção de Intrusão (IDS) que será desenvolvido para estudar o monitoramento de atividades, identificação de padrões suspeitos e geração de alertas de segurança.
-
-**Conceitos planejados:**
-- Monitoramento de rede
-- Análise de tráfego e eventos
-- Detecção de atividades suspeitas
-- Logs e geração de alertas
-- Network Security
-- Blue Team
-
-📂 [Acessar diretório do projeto](./intrusion-detection/)
 
 ---
 
