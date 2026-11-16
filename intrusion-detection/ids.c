@@ -70,13 +70,11 @@ int main(){
 
 	handle = pcap_open_live(device, BUFSIZ, 1, 1000, errbuf);
 	
-	// 1. CHECAGEM DE SEGURANÇA VEM PRIMEIRO!
 	if(handle == NULL){
 		printf("\n[!] Não foi possível abrir a placa: %s\n", errbuf);
 		return 2;
 	}
 
-	// 2. CORREÇÃO DA ASPA DO PRINTF
 	if(pcap_datalink(handle) != DLT_EN10MB){
 		printf("\n[!] AVISO: a interface %s não usa cabeçalho Ethernet (14 bytes)\n", device);
 		printf("[!] O tipo de link retornado foi %d\n", pcap_datalink(handle));
