@@ -19,12 +19,12 @@ Os projetos são desenvolvidos principalmente em **C e Python**, utilizando dife
 
 ## 📑 Índice
 
-- [🚀 Projetos](#-projetos)
+- [🚀 Projetos](#-projetos) 
   - [🔐 Criptografia e Segurança de Senhas](#-criptografia-e-segurança-de-senhas)
   - [🔑 Autenticação](#-autenticação)
   - [🌐 Redes e Reconhecimento](#-redes-e-reconhecimento)
   - [🕸️ Segurança Web](#️-segurança-web)
-  - [🛡️ Detecção de Intrusão](#️-detecção-de-intrusão)
+  - [🛡️ Detecção de Intrusão e Ameaças](#️-detecção-de-intrusão-e-ameaças)
 - [🧰 Tecnologias](#-tecnologias)
 - [📊 Áreas de Estudo](#-áreas-de-estudo)
 - [🔧 Como executar](#-como-executar)
@@ -766,7 +766,7 @@ O projeto possui duas implementações:
 
 ---
 
-### 🛡️ Detecção de Intrusão
+### 🛡️ Detecção de Intrusão e Ameaças
 
 #### 🚧 Intrusion Detection System (IDS)
 
@@ -783,6 +783,38 @@ Sistema de Detecção de Intrusão (IDS) que será desenvolvido para estudar o m
 - Blue Team
 
 📂 [Acessar diretório do projeto](./intrusion-detection/)
+
+---
+
+#### 🕵️ Pegasus Telemetry Detection — Categorical Naive Bayes
+
+**Linguagem:** Python
+
+Projeto de pesquisa que utiliza o algoritmo **Categorical Naive Bayes**, da biblioteca Scikit-Learn, para classificar dados de telemetria de rede e identificar padrões associados a atividades maliciosas relacionadas ao spyware Pegasus.
+
+A solução foi desenvolvida com foco em uma possível aplicação como filtro de primeira linha em um **Security Operations Center (SOC)**, priorizando a identificação de ameaças. Na avaliação realizada com uma base sintética, o modelo alcançou **93,78% de Recall** em 300 amostras de teste.
+
+**Conceitos praticados:**
+- Machine Learning aplicado à Cibersegurança
+- Teorema de Bayes
+- Categorical Naive Bayes
+- Classificação supervisionada
+- Análise de telemetria de rede
+- Engenharia e pré-processamento de dados
+- Discretização por quantis (`pd.qcut`)
+- Codificação de atributos categóricos (`OrdinalEncoder`)
+- Avaliação de modelos: Recall, Precisão, F1-Score e Acurácia
+- Detecção de ameaças e contexto SOC
+
+**Tecnologias utilizadas:**
+- Python 3.10+
+- Pandas e NumPy
+- Scikit-Learn
+- Matplotlib e Seaborn
+
+**Documentação e execução:** consulte o README individual do projeto.
+
+📂 [Documentação completa](intrusion-detection/pegasus-naivebayes-detection)
 
 ---
 
