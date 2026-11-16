@@ -768,21 +768,47 @@ O projeto possui duas implementações:
 
 ### 🛡️ Detecção de Intrusão e Ameaças
 
-#### 🚧 Intrusion Detection System (IDS)
+#### 📡 Intrusion Detection System (IDS)
 
-**Status:** Planejado
+<badge>Versões C e Python</badge>
 
-Sistema de Detecção de Intrusão (IDS) que será desenvolvido para estudar o monitoramento de atividades, identificação de padrões suspeitos e geração de alertas de segurança.
+Ferramenta experimental de monitoramento passivo desenvolvida para explorar os fundamentos de **segurança de redes, captura de pacotes e inspeção profunda de tráfego (DPI)**.
 
-**Conceitos planejados:**
-- Monitoramento de rede
-- Análise de tráfego e eventos
-- Detecção de atividades suspeitas
-- Logs e geração de alertas
-- Network Security
-- Blue Team
+O IDS opera colocando a interface de rede em Modo Promíscuo para interceptar pacotes em tempo real, dissecar os cabeçalhos das camadas IP, TCP e Aplicação e disparar alertas diante de varreduras furtivas de portas (`TCP SYN Scan`) e tráfego HTTP em texto claro.
 
-📂 [Acessar diretório do projeto](./intrusion-detection/)
+O projeto possui duas implementações:
+
+**Versão C**
+- Linguagem C
+- Biblioteca `libpcap`
+- Headers nativos (`<netinet/ip.h>`, `<netinet/tcp.h>`)
+- Aritmética de ponteiros e operações *bitwise*
+- Detecção de flags TCP SYN e payloads HTTP
+
+**Versão Python**
+- Python 3
+- Biblioteca `scapy`
+- Captura contínua (`sniff`) sem retenção em RAM
+- Dissecção orientada a objetos das camadas IP/TCP/Raw
+- Detecção de varreduras SYN e requisições HTTP
+
+**Conceitos praticados:**
+- Network Security (Blue Team)
+- Encapsulamento TCP/IP
+- Modo Promíscuo
+- Aritmética de Ponteiros e Endianness
+- Operações Bitwise em Flags TCP
+- Deep Packet Inspection (DPI)
+- Detecção baseada em assinaturas
+
+**Evolução do projeto:**
+- Implementação inicial em C com `libpcap`.
+- Refatoração e reimplementação em Python com `Scapy`.
+- Expansão futura com registro de logs em disco e análise estatística de anomalias.
+
+**Documentação e execução:** consulte o README individual do projeto.
+
+📂 [Documentação completa](intrusion-detection/intrusion-detection-system/README.md)
 
 ---
 
